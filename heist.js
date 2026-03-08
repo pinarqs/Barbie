@@ -43,6 +43,10 @@
 </body>
 </html>
 <a href="https://www.youtube.com/@pinarqs7" target="_blank">
+  window.secondCode = secondCode;
+window.safeGame safeGame;
+window.finishHeist = finishHeist;
 <button>🎥 Pınar'ın YouTube Kanalı</button>
 </a>
+
 
