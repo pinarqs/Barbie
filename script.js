@@ -160,6 +160,10 @@ isDragging=false
 })
 
 document.addEventListener("mousemove",(e)=>{
+  document.addEventListener("touchmove", function(e){
+movePlayer(e.touches[0]);
+});
+
 
 if(isDragging){
 
@@ -233,3 +237,4 @@ window.open("https://www.youtube.com/@pinarqs7", "_blank");
 }
 
 });
+
