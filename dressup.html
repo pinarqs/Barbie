@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+
+<meta charset="UTF-8">
+<title>Barbie Dress Up Game</title>
+
+<style>
+
+body{
+font-family:Arial;
+text-align:center;
+background:pink;
+}
+
+h1{
+color:white;
+text-shadow:0 0 10px hotpink;
+}
+
+#game{
+
+display:flex;
+justify-content:center;
+gap:60px;
+margin-top:40px;
+
+}
+
+#barbie{
+
+font-size:120px;
+border:3px dashed hotpink;
+padding:40px;
+border-radius:20px;
+
+}
+
+.items{
+
+display:flex;
+flex-direction:column;
+gap:10px;
+
+}
+
+.item{
+
+font-size:40px;
+cursor:grab;
+
+}
+
+button{
+
+margin-top:20px;
+padding:10px 20px;
+border:none;
+border-radius:20px;
+background:hotpink;
+color:white;
+cursor:pointer;
+
+}
+
+</style>
+</head>
+
+<body>
+
+<h1>🎀 Barbie Dress Up Game 🎀</h1>
+
+<div id="game">
+
+<div class="items">
+
+<div class="item" draggable="true">👗</div>
+<div class="item" draggable="true">👚</div>
+<div class="item" draggable="true">👠</div>
+<div class="item" draggable="true">👑</div>
+<div class="item" draggable="true">👜</div>
+<div class="item" draggable="true">💎</div>
+
+</div>
+
+<div id="barbie">👩</div>
+
+</div>
+
+<h3>Arka Plan</h3>
+
+<button onclick="bg('pink')">Pink</button>
+<button onclick="bg('lavender')">Purple</button>
+<button onclick="bg('lightblue')">Blue</button>
+
+<br><br>
+
+<button onclick="location.href='index.html'">
+⬅ Ana Sayfa
+</button>
+
+<script>
+
+let draggedItem = null
+
+document.querySelectorAll(".item").forEach(item => {
+
+item.addEventListener("dragstart", function(){
+
+draggedItem = this.innerHTML
+
+})
+
+})
+
+const barbie = document.getElementById("barbie")
+
+barbie.addEventListener("dragover", function(e){
+
+e.preventDefault()
+
+})
+
+barbie.addEventListener("drop", function(){
+
+barbie.innerHTML += draggedItem
+
+})
+
+function bg(color){
+
+document.body.style.background = color
+
+}
+
+</script>
+
+</body>
+</html>

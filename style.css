@@ -1,0 +1,534 @@
+body{
+
+background:linear-gradient(pink,hotpink);
+font-family:Arial;
+text-align:center;
+color:white;
+
+}
+
+.title{
+
+font-size:50px;
+margin-top:40px;
+text-shadow:0 0 20px white;
+
+}
+
+.subtitle{
+
+font-size:22px;
+
+}
+
+.menu{
+
+margin-top:40px;
+
+}
+
+.pinkButton{
+
+background:white;
+color:hotpink;
+border:none;
+padding:15px 30px;
+font-size:18px;
+border-radius:30px;
+cursor:pointer;
+margin:10px;
+transition:0.3s;
+
+}
+
+.pinkButton:hover{
+
+background:hotpink;
+color:white;
+transform:scale(1.1);
+
+}
+
+.sparkles{
+
+font-size:40px;
+margin-top:60px;
+
+}
+
+/* OYUN */
+
+#gameArea{
+
+width:600px;
+height:350px;
+background:pink;
+border:5px solid hotpink;
+margin:20px auto;
+position:relative;
+overflow:hidden;
+border-radius:20px;
+
+}
+
+.diamond{
+
+position:absolute;
+font-size:30px;
+cursor:pointer;
+
+}
+
+.laser{
+
+position:absolute;
+width:100%;
+height:6px;
+background:red;
+animation:laserMove 2s infinite alternate;
+
+}
+
+@keyframes laserMove{
+
+0%{top:40px;}
+100%{top:300px;}
+
+}
+/* KALP VE UNICORN YAĞMURU */
+
+.fall{
+position:fixed;
+top:-50px;
+font-size:30px;
+animation:fall 5s linear forwards;
+pointer-events:none;
+}
+
+@keyframes fall{
+
+0%{
+transform:translateY(-50px);
+}
+
+100%{
+transform:translateY(110vh);
+}
+
+}
+
+/* YILDIZ İZİ */
+
+.starTrail{
+
+position:fixed;
+font-size:15px;
+color:yellow;
+pointer-events:none;
+animation:fadeStar 1s forwards;
+
+}
+
+@keyframes fadeStar{
+
+0%{opacity:1; transform:scale(1)}
+100%{opacity:0; transform:scale(2)}
+
+}
+
+/* BÜYÜLÜ PARILTILAR */
+
+.magicSparkle{
+
+position:absolute;
+font-size:20px;
+animation:sparklePop 1s forwards;
+pointer-events:none;
+
+}
+
+@keyframes sparklePop{
+
+0%{transform:scale(0)}
+100%{transform:scale(2); opacity:0}
+
+}
+/* GÖKKUŞAĞI ARKA PLAN PARILTISI */
+
+.rainbowMagic{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+lime,
+cyan,
+blue,
+violet
+);
+
+opacity:0.15;
+
+pointer-events:none;
+
+animation:rainbowMove 5s linear infinite;
+
+}
+
+@keyframes rainbowMove{
+
+0%{background-position:0%}
+100%{background-position:200%}
+
+}
+/* 🌈 HAREKETLİ GÖKKUŞAĞI */
+
+.rainbow{
+position:fixed;
+top:0;
+left:-50%;
+width:200%;
+height:10px;
+
+background:linear-gradient(
+90deg,
+red,
+orange,
+yellow,
+green,
+blue,
+indigo,
+violet
+);
+
+animation:rainbowMove 5s linear infinite;
+z-index:999;
+}
+
+@keyframes rainbowMove{
+0%{transform:translateX(0)}
+100%{transform:translateX(50%)}
+}
+
+
+/* 🦄 UÇAN UNICORN */
+
+.unicorn{
+position:fixed;
+font-size:40px;
+animation:flyUnicorn 10s linear infinite;
+}
+
+@keyframes flyUnicorn{
+
+0%{
+left:-10%;
+top:80%;
+}
+
+50%{
+top:30%;
+}
+
+100%{
+left:110%;
+top:60%;
+}
+
+}
+
+
+/* 💖 KALP PATLAMASI */
+
+.heart{
+position:fixed;
+font-size:20px;
+animation:heartFloat 2s ease-out forwards;
+}
+
+@keyframes heartFloat{
+
+0%{
+opacity:1;
+transform:scale(1);
+}
+
+100%{
+opacity:0;
+transform:translateY(-100px) scale(2);
+}
+
+}
+/* 🌈 ARKA PLAN GÖKKUŞAĞI */
+
+body{
+
+background: linear-gradient(
+270deg,
+#ff9a9e,
+#fad0c4,
+#fbc2eb,
+#a18cd1,
+#f6d365,
+#fda085
+);
+
+background-size: 1200% 1200%;
+
+animation: rainbowBackground 15s ease infinite;
+
+}
+
+
+@keyframes rainbowBackground{
+
+0%{
+background-position:0% 50%;
+}
+
+50%{
+background-position:100% 50%;
+}
+
+100%{
+background-position:0% 50%;
+}
+
+}
+/* 💖 BARBIE GLITTER */
+
+@keyframes glitterFall{
+
+0%{
+transform:translateY(0px) rotate(0deg);
+opacity:1;
+}
+
+100%{
+transform:translateY(100vh) rotate(360deg);
+opacity:0;
+}
+
+}
+/* 🌈 ARKA PLAN GÖKKUŞAĞI */
+
+body{
+
+background: linear-gradient(
+270deg,
+#ff9a9e,
+#fad0c4,
+#fbc2eb,
+#a18cd1,
+#f6d365,
+#fda085
+);
+
+background-size: 1200% 1200%;
+animation: rainbowBackground 15s ease infinite;
+
+}
+
+@keyframes rainbowBackground{
+
+0%{background-position:0% 50%;}
+50%{background-position:100% 50%;}
+100%{background-position:0% 50%;}
+
+}
+#cornerUnicorn{
+
+position:fixed;
+bottom:10px;
+left:-50px;
+font-size:40px;
+animation:walkUnicorn 15s linear infinite;
+
+}
+
+@keyframes walkUnicorn{
+
+0%{left:-50px;}
+100%{left:110%;}
+
+}
+@keyframes explode{
+
+0%{
+transform:scale(1);
+opacity:1;
+}
+
+100%{
+transform:translateY(-80px) scale(2);
+opacity:0;
+}
+
+}
+.barbieLogo{
+
+font-size:60px;
+text-align:center;
+
+color:#ff4fd8;
+
+text-shadow:
+0 0 5px #ff4fd8,
+0 0 10px #ff4fd8,
+0 0 20px #ff00c8,
+0 0 40px #ff00c8;
+
+animation:logoGlow 2s infinite alternate;
+
+}
+
+@keyframes logoGlow{
+
+from{
+text-shadow:
+0 0 5px #ff4fd8,
+0 0 10px #ff4fd8;
+}
+
+to{
+text-shadow:
+0 0 20px #ff00c8,
+0 0 40px #ff00c8;
+}
+
+}
+/* 💖 BARBIE STICKERLAR */
+
+.stickers{
+
+position:fixed;
+top:0;
+left:0;
+width:100%;
+height:100%;
+pointer-events:none;
+
+}
+
+.sticker{
+
+position:absolute;
+font-size:40px;
+pointer-events:auto;
+cursor:pointer;
+
+animation:floatSticker 6s infinite ease-in-out;
+
+}
+
+/* rastgele konumlar */
+
+.sticker:nth-child(1){
+top:10%;
+left:5%;
+}
+
+.sticker:nth-child(2){
+top:70%;
+left:80%;
+}
+
+.sticker:nth-child(3){
+top:30%;
+left:60%;
+}
+
+.sticker:nth-child(4){
+top:80%;
+left:20%;
+}
+
+.sticker:nth-child(5){
+top:50%;
+left:40%;
+}
+
+@keyframes floatSticker{
+
+0%{
+transform:translateY(0px);
+}
+
+50%{
+transform:translateY(-15px);
+}
+
+100%{
+transform:translateY(0px);
+}
+
+}
+@keyframes stickerBoom{
+
+0%{
+transform:scale(1);
+opacity:1;
+}
+
+100%{
+transform:translateY(-80px) scale(2) rotate(360deg);
+opacity:0;
+}
+
+}
+@keyframes rainFall{
+
+0%{
+transform:translateY(0px);
+}
+
+100%{
+transform:translateY(100vh);
+}
+
+}
+.avatarMaker{
+
+position:fixed;
+right:20px;
+bottom:20px;
+
+background:white;
+padding:15px;
+
+border-radius:15px;
+
+box-shadow:0 0 15px pink;
+
+text-align:center;
+
+}
+
+#avatarPreview{
+
+font-size:60px;
+margin-bottom:10px;
+
+}
+.vault{
+
+position:fixed;
+left:20px;
+bottom:20px;
+
+background:#ffe6f5;
+
+padding:15px;
+
+border-radius:15px;
+
+box-shadow:0 0 15px hotpink;
+
+}
