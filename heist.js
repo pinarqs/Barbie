@@ -1,52 +1,78 @@
-<!DOCTYPE html>
-<html lang="tr">
+let score=0
 
-<head>
+function startGame(){
 
-<meta charset="UTF-8">
+let area=document.getElementById("gameArea")
 
-<title>Barbie Heist</title>
+area.innerHTML=""
 
-<link rel="stylesheet" href="style.css">
+/* ELMASLAR */
 
-</head>
+for(let i=0;i<5;i++){
 
-<body>
+let diamond=document.createElement("div")
 
-<h1>💎 Barbie Diamond Heist</h1>
+diamond.innerText="💎"
 
-<p>Elmasları topla ama lazere dikkat et!</p>
+diamond.style.position="absolute"
+diamond.style.left=Math.random()*550+"px"
+diamond.style.top=Math.random()*300+"px"
 
-<h2 id="score">Puan: 0</h2>
+diamond.style.fontSize="30px"
+diamond.style.cursor="pointer"
 
-<h2 id="timer">Süre: 30</h2>
+diamond.onclick=function(){
 
-<div id="gameArea"></div>
+score++
 
-<br>
+document.getElementById("score").innerText="Puan: "+score
 
-<button onclick="startGame()" class="pinkButton">🎮 Oyunu Başlat</button>
+diamond.remove()
 
-<button onclick="secondCode()" class="pinkButton">🔐 Gizli Kasa</button>
+}
 
-<button onclick="safeGame()" class="pinkButton">🎲 Kasa Tahmini</button>
+area.appendChild(diamond)
 
-<button onclick="finishHeist()" class="pinkButton">🏆 Heist Bitir</button>
+}
 
-<br><br>
+/* LAZER */
 
-<a href="index.html">
-<button class="pinkButton">⬅ Ana Sayfa</button>
-</a>
+let laser=document.createElement("div")
 
-<script src="heist.js"></script>
-</body>
-</html>
-<a href="https://www.youtube.com/@pinarqs7" target="_blank">
-  window.secondCode = secondCode;
-window.safeGame safeGame;
-window.finishHeist = finishHeist;
-<button>🎥 Pınar'ın YouTube Kanalı</button>
-</a>
+laser.className="laser"
 
+area.appendChild(laser)
 
+}
+
+function secondCode(){
+
+alert("🔐 Gizli kasa henüz aktif değil!")
+
+}
+
+function safeGame(){
+
+let guess=prompt("1-5 arası sayı tahmin et")
+
+let num=Math.floor(Math.random()*5)+1
+
+if(guess==num){
+
+alert("🎉 Kazandın!")
+
+}
+
+else{
+
+alert("❌ Kaybettin")
+
+}
+
+}
+
+function finishHeist(){
+
+alert("🏆 Heist tamamlandı! Toplam puan: "+score)
+
+}
