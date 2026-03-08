@@ -1,73 +1,48 @@
-/* ELMASTA PARILTILI PATLAMA */
+<!DOCTYPE html>
+<html lang="tr">
 
-function sparkleExplosion(x,y){
+<head>
 
-for(let i=0;i<6;i++){
+<meta charset="UTF-8">
 
-let s=document.createElement("div")
+<title>Barbie Heist</title>
 
-s.className="magicSparkle"
+<link rel="stylesheet" href="style.css">
 
-s.innerText="✨"
+</head>
 
-s.style.left=x+"px"
-s.style.top=y+"px"
+<body>
 
-document.getElementById("gameArea").appendChild(s)
+<h1>💎 Barbie Diamond Heist</h1>
 
-setTimeout(()=>{
+<p>Elmasları topla ama lazere dikkat et!</p>
 
-s.remove()
+<h2 id="score">Puan: 0</h2>
 
-},1000)
+<h2 id="timer">Süre: 30</h2>
 
-}
+<div id="gameArea"></div>
 
-}
+<br>
 
+<button onclick="startGame()" class="pinkButton">🎮 Oyunu Başlat</button>
 
-/* MEVCUT ELMASTA EKLE */
+<button onclick="secondCode()" class="pinkButton">🔐 Gizli Kasa</button>
 
-document.addEventListener("click",(e)=>{
+<button onclick="safeGame()" class="pinkButton">🎲 Kasa Tahmini</button>
 
-sparkleExplosion(e.clientX,e.clientY)
+<button onclick="finishHeist()" class="pinkButton">🏆 Heist Bitir</button>
 
-})
+<br><br>
 
+<a href="index.html">
+<button class="pinkButton">⬅ Ana Sayfa</button>
+</a>
 
-/* BÜYÜLÜ GÖKKUŞAĞI PARILTISI */
+<script src="heist.js"></script>
+</body>
+</html>
+<a href="https://www.youtube.com/@pinarqs7" target="_blank">
+<button>🎥 Pınar'ın YouTube Kanalı</button>
+</a>
 
-function rainbowGlow(){
-
-document.body.style.boxShadow="0 0 60px pink"
-
-setTimeout(()=>{
-
-document.body.style.boxShadow="none"
-
-},1000)
-
-}
-
-setInterval(rainbowGlow,5000)
-/* GÖKKUŞAĞI EFEKTİ */
-
-function rainbowEffect(){
-
-let rainbow=document.createElement("div")
-
-rainbow.className="rainbowMagic"
-
-document.body.appendChild(rainbow)
-
-setTimeout(()=>{
-
-rainbow.remove()
-
-},4000)
-
-}
-
-/* 10 saniyede bir gökkuşağı */
-
-setInterval(rainbowEffect,10000)
